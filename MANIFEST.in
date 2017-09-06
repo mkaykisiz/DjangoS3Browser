@@ -1,0 +1,7 @@
+include *.txt *.ini *.cfg *.rst
+recursive-include djangoS3Browser *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml *.py
+recursive-include djangoS3Browser/templates *.html
+recursive-include djangoS3Browser/static *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml *.py
+recursive-include djangoS3Browser/static/css *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml
+recursive-include djangoS3Browser/static/js *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml
+recursive-include djangoS3Browser/static/images *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml

@@ -1,0 +1,139 @@
+
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+.pb-filemng-template {
+    font-family: 'Sansita', sans-serif;
+}
+
+.pb-filemng-navbar {
+    margin-bottom: 0;
+}
+
+.treeview-toggle-btn {
+    margin-left: 15px;
+}
+
+.pb-filemng-template-btn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: gray;
+    padding: 0px 13px 0px 13px;
+}
+
+.pb-filemng-active {
+    border-bottom: 2px solid #6d97db;
+    color: #5f6977;
+}
+
+.pb-filemng-template-btn:hover {
+    color: blue;
+}
+
+.pb-filemng-body-folders > img:hover {
+    cursor: pointer;
+}
+
+.pb-filemng-body-folders > img {
+    height: 80px;
+    width: auto;
+    max-width: 80px;
+}
+
+.pb-filemng-body-folders {
+    text-align: center;
+    cursor: move;
+}
+
+.btn-align {
+    margin-top: 7px;
+}
+
+.pb-filemng-template-treeview {
+    border-right: 1px solid gray;
+}
+
+.pb-filemng-folder {
+    color: orange;
+    padding-bottom: 3px;
+}
+
+.pb-filemng-paragraphs {
+    width: 130px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 1.4em;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+
+    .pb-filemng-template-treeview {
+        border-right: none;
+    }
+
+    #options {
+        text-align: center;
+    }
+
+    #options > li {
+        display: inline-block;
+    }
+
+    #pb-filemng-navigation > ul {
+        text-align: center;
+    }
+
+    #pb-filemng-navigation > ul > li {
+        display: inline-block;
+    }
+
+}
+
+.check-file {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    padding: 10px;
+    font-size: 20px;
+}
