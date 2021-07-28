@@ -1,5 +1,5 @@
 Django S3 File Browser
-============
+======================
 
 
 :Info: S3 File Browser For Django.
@@ -27,6 +27,16 @@ First, download library:
 
 
     pip install djangoS3Browser
+
+Add djangoS3Browser to INSTALLED_APPS:
+
+.. code-block:: python
+
+
+    INSTALLED_APPS = [
+        ...
+        'djangoS3Browser',
+    ]
 
 
 Then, make the necessary configurations for the `Boto 3 <https://github.com/boto/boto3>`_ library:
@@ -83,7 +93,7 @@ Then, add this to the top of the page you want to add:
 .. code-block:: python
 
 
-    {% load s3-tags %}
+    {% load s3tags %}
 
 
 Finally, add this to the content of the page you want to add:
