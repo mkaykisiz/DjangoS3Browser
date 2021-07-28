@@ -6,7 +6,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 setup(
     name='DjangoS3Browser',
-    version='0.2',
+    version='0.3',
     packages=['djangoS3Browser', 'djangoS3Browser.s3_browser',
               'djangoS3Browser.templatetags'],
     include_package_data=True,
