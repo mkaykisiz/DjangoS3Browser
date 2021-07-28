@@ -69,11 +69,16 @@
     height: 80px;
     width: auto;
     max-width: 80px;
+    margin-bottom: 4px;
 }
 
 .pb-filemng-body-folders {
     text-align: center;
     cursor: move;
+}
+
+.pb-filemng-body-folders:hover {
+    background-color: rgba(0, 0, 255, 0.1);
 }
 
 .btn-align {
@@ -90,7 +95,7 @@
 }
 
 .pb-filemng-paragraphs {
-    width: 130px;
+    width: 100%px;
     height: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -128,7 +133,7 @@
 
 .check-file {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 90%;
     transform: translateX(-50%) translateY(-50%);
     background: #fff;
@@ -136,4 +141,9 @@
     -moz-transform: translateX(-50%) translateY(-50%);
     padding: 10px;
     font-size: 20px;
+    background-color: transparent;
+}
+
+.check-file:hover {
+    background-color: rgba(0, 0, 255, 0.1);
 }
