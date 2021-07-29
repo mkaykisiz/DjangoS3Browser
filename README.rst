@@ -76,7 +76,7 @@ Next, add to TEMPLATES['OPTIONS'] in settings.py:
 
 
         'libraries': {
-            's3-load': 'djangoS3Browser.templatetags.s3-tags',
+            's3-load': 'djangoS3Browser.templatetags.s3tags',
         },
 
 
