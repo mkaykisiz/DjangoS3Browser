@@ -1,4 +1,5 @@
 import boto3
+import botocore
 import sys
 
 try:
@@ -10,8 +11,17 @@ from django.conf import settings
 
 s3 = boto3.resource('s3', aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
                     aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY)
-s3client = boto3.client('s3', aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-                        aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY)
+
+if settings.AWS_PROVIDER=='digital ocean':
+    s3client = boto3.client('s3',
+                            endpoint_url=f'https://{settings.AWS_DO_REGION}.digitaloceanspaces.com', # Find your endpoint in the control panel, under Settings. Prepend "https://".
+                            config=botocore.config.Config(s3={'addressing_style': 'virtual'}), # Configures to use subdomain/virtual calling format.
+                            region_name=settings.AWS_DO_REGION, # Use the region in your endpoint.
+                            aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+                            aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY)
+else:
+    s3client = boto3.client('s3', aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+                            aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY)
 bucket = s3.Bucket(settings.AWS_STORAGE_BUCKET_NAME)
 bucket_location = s3client.get_bucket_location(Bucket=settings.AWS_STORAGE_BUCKET_NAME)
 """
