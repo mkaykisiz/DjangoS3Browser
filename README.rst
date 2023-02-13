@@ -106,3 +106,18 @@ Finally, add this to the content of the page you want to add:
 
 
 .. image:: https://user-images.githubusercontent.com/5642113/30087574-225e38a8-92aa-11e7-8bf4-4da7a5048812.png
+
+Digital Ocean Spaces
+____________________
+For use with Digital Ocean Spaces, compatible with S3 from AWS, follow the instructions published by DO and setup the 
+two additional variables in the settings file for the variable in settings file AWS_DO_REGION for Digital Ocean region e.g. sfo3 etc.
+and to introduce variable in settings file AWS_PROVIDER for value *digital ocean* to handle DO Spaces; example,
+
+.. code-block:: python
+
+
+      AWS_PROVIDER = 'digital ocean'
+      AWS_DO_REGION = 'sfo3'
+      
+
+This should enable Digital Ocean spaces storage service to work through this package.
